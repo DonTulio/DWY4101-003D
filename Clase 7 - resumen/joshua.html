@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex otra vez</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            border: 5px solid;
+        }
+        header, main, section{
+            display: flex;
+            flex-flow: row wrap;
+        }
+        header{
+            border-color: yellow;
+            height: 50px;
+        }
+        main{
+            border-color: gray;
+        }
+        section{
+            border-color: blue;
+            padding:15px;
+        }
+        article{
+            flex: 1 0 auto;
+            height: 50px;
+            width: 50px;
+        }
+        .contenido{
+            height: auto;
+            width: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .contenido section{
+            flex-flow: column wrap;
+        }
+
+    </style>
+</head>
+<body>
+    <header></header>
+    <main>
+        <section>
+            <article class="contenido">
+                <section>
+                    <article>1</article>
+                    <article>2</article>
+                    <article>3</article>
+                    <article>4</article>
+                </section>
+            </article>
+            <article>2</article>
+            <article>3</article>
+            <article>4</article>
+        </section>
+        <section>
+            <article>1</article>
+            <article>2</article>
+            <article>3</article>
+            <article>4</article>
+        </section>
+    </main>
+</body>
+</html>

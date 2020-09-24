@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function crearContenido(elemento, texto, padre, id, clase) {
+            if (document.readyState === "interactive" ||
+                document.readyState === "complete"
+            ) {
+                // Creando elemento y asignando el texto
+                const elemenoNuevo = document.createElement(elemento);
+                elemenoNuevo.innerText = texto;
+                if (id !== undefined) {
+                    elemenoNuevo.id = id;
+                }
+                if (clase !== undefined) {
+                    elemenoNuevo.classList.add(clase);
+                }
+                // Buscando al padre
+                const contenidoPadre = document.querySelector(padre);
+                contenidoPadre.appendChild(elemenoNuevo);
+
+            } else {
+                console.log("Cargando aún.......");
+            }
+        }
+    </script>
+</body>
+
+</html>

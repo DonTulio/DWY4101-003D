@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formularios</title> 
+        <style>
+            *{
+                margin:0px;
+                padding: 0px;
+                box-sizing: border-box;
+            }
+            form{
+                display: block;
+                width: 50%;
+                margin: 15px auto;
+                
+            }
+            div{
+                display: block;
+                width: 100%;
+            }
+            div input {
+                width: 100%;
+                height: 30px;
+
+            }
+        </style>
+    </head>
+    <body>
+        <form onsubmit="enviarFormulario(this,event)">
+            <div>
+                <label for="">Ingrese su usario</label>
+                <input type="text" name="usuario" maxlength="5" minlength="1" t-maxlength="5" t-minlength="2" required>
+            </div>
+            <div>
+                <label for="">Ingrese su contraseña</label>
+                <input type="password" name="password" required>
+            </div>
+            <div>
+                <input type="submit" value="enviar">
+            </div>
+        </form>
+        <script src="./asset/js/js.js">
+        </script>
+    </body>
+</html>

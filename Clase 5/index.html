@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button onclick="apretarBoton()" >Aprietame cotito :3</button> Funciona con el script js.js -->
+    <form  onsubmit="recibirInformacion(this,event)">
+        <input type="text" name="nombre" placeholder="nombre" >
+        <input type="text" name="apellido" placeholder="apellido" >
+        <input type="number" name="edad" placeholder="edad" >
+        <input type="date" name="fecha_nacimiento" placeholder="fecha_nacimiento" >
+        <textarea name="detalle" id="" cols="30" rows="10"></textarea>
+        <input type="submit">
+    </form>
+    <table id="tabla">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+                <th>fecha Nacimiento</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+    <!-- <script src="./asset/js/js.js"></script> -->
+    <script src="asset/js/formulario.js"></script>
+</body>
+</html>

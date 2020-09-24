@@ -1,0 +1,222 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+/* header */
+.header {
+    /* por defecto es block, pero lo definimos para ser mas descriptivos */
+    display: block;
+    height: 50px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 5px;
+    background-color: #557571;
+    font-size: 0px;
+}
+.header img {
+    display: inline-block;
+    width: 150px;
+    height: 42px;
+    vertical-align: middle;
+    margin-left: 10px;
+    /* 1000 - 160 = 840 */
+}
+.header button{
+    width: 100px;
+    height: 42px;
+    vertical-align: middle;
+    background-color: #f4f4f4;
+    border:none;
+    margin: 0px 5px 0px 5px;
+    border-radius: 5px;
+    outline: none;
+    /* 840 - 110 = 730 */
+}
+.header input {
+    height: 42px;
+    width: 350px;
+    border-radius: 5px 5px 5px 5px;
+    padding: 0px 0px 0px 5px;
+    vertical-align: middle;
+    background-color: #f4f4f4;
+    outline: none;
+    border: 0px solid;
+    /* 730 - 355 = 375 */
+}
+.header nav {
+   display: inline-block;
+   width: 365px;
+   margin: 0px 5px 0px 5px;
+   text-align: end;
+}
+.header nav a{
+    /* Espacio de trabajo 365 */
+    font-size: 1rem;
+    display: inline-block;
+    height: 42px;
+    width: 85px;
+    margin: 0px 2px 0px 2px;
+    text-decoration:none;
+    vertical-align: middle;
+    padding-top: 12px;
+    background-color: #f4f4f4;
+    color: black;
+    text-align: center;
+    border-radius: 10px;
+}
+.header nav a:hover {
+    background-color: black;
+    color:#f4f4f4;
+}
+/* parte media */
+section.titulo {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+section.titulo {
+    margin-top: 20px;
+
+}
+section.titulo h1{
+    display: inline-block;
+    font-size: 2.5rem;
+}
+section.titulo span{
+    font-size: 1.5rem;
+}
+section.titulo nav a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #40a8c4 
+}
+section.titulo nav span{
+    color: grey;
+}
+/* contenido */
+main{
+    max-width: 1000px;
+    margin:0 auto;
+    display: block;
+    font-size: 0px;
+    margin-bottom: 25px;
+}
+main section {
+    max-width: 650px;
+    width: 650px;
+    display: inline-block;
+    height: 500px;
+    font-size: 1rem;
+    overflow-y: scroll;
+}
+main aside {
+    max-width: 350px;
+    display: inline-block;
+    width: 350px;
+    height: 500px;
+    font-size: 1rem;
+    vertical-align: top;
+    overflow-y: scroll;
+}
+article{
+    font-size:0px;
+    border: 2px solid grey;
+    width: 630px;
+    height: 150px;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+article h2{
+    display: inline-block;
+    font-size: 2rem;
+}
+article>span{
+    font-size: 1.2rem;
+    margin-left: 12px;
+    color: grey;
+}
+article>p{
+    font-size:1rem;
+    color:black;
+}
+article>button{
+    width: 100px;
+    height: 40px;
+    background-color: #40a8c4;
+    outline: none;
+    border: 0px solid;
+    border-radius: 5px;
+}
+article>button:active{
+    color:wheat;
+    background-color: #40a8c4;
+}
+article>button:hover{
+    background-color:wheat;
+}
+/* publicidad derecha */
+main aside div{
+    width: 330px;
+    margin: 0 auto;
+    border: 2px solid grey;
+    border-bottom: 0px;
+        border-left: 0px;
+    border-right: 0px;
+    margin-top: 5px;
+}
+body > aside{
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow-x: scroll; 
+    position: relative;
+    height: 300px;
+}
+body > aside div{
+    display: inline-block;
+    max-width: 200px;
+    height: 250px;
+    flex-shrink: 0;
+    padding: 5px 10px 5px 10px;
+    border: 2px solid gray;
+    margin: 0px 25px;
+}
+body > aside div h3{
+    border-bottom: 1px solid grey;
+}
+body > aside div p{
+    margin-top: 5px;
+}
+body>nav{
+    display: block;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+body>nav a{
+    /* Espacio de trabajo 365 */
+    font-size: 1rem;
+    display: inline-block;
+    height: 42px;
+    width: 85px;
+    margin: 0px 2px 0px 2px;
+    text-decoration:none;
+    vertical-align: middle;
+    padding-top: 12px;
+    background-color: #f4f4f4;
+    color: black;
+    text-align: center;
+    border-radius: 10px;
+}
+body>nav a:hover {
+    background-color: black;
+    color:#f4f4f4;
+}
+footer{
+    max-width: 1000px;
+    display:  block;
+    margin: 0 auto;
+}

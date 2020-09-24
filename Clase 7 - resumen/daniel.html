@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validaciones basicas</title>
+</head>
+<body>
+    <p>Los textos que tienen un ** son obligatorios</p>
+    <p>Necesitas ser mayor de 18 para entrar 1313</p>
+    <form method="GET" onsubmit="nombre(event /*Mandamos la ejecución del evento*/)">
+        <label for="">Ingrese nombre **</label>
+        <br>
+        <input type="text" 
+        placeholder="Hola!!"
+        name="nombre"
+        required
+        minlength="5"
+        maxlength="15"
+        >
+        <br>
+        <span>El nombre debe ser entre 5 y 15 caracteres</span>
+        <br>
+        <label for="">Ingrese edad (+18)</label>
+        <br>
+        <input 
+        type="number" 
+        name="edad"
+        required
+        min="18"
+        >
+        <br>
+        <input type="submit">
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <a href="#" onclick="nombre(event)">Click me</a>   
+    <script>
+        // esto es una función global
+        function nombre(parametro /*por aquí mandamos el evento*/){
+            // Usando preventDefault, podemos parar el comportamiento y propagación de un evento
+            parametro.preventDefault();
+        }
+
+    </script>
+</body>
+</html>
