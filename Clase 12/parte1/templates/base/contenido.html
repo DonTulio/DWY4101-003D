@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ titulo }}</title>
+    {% block header %}
+        <link rel="stylesheet" href="{% static "css/style.css" %}">
+    {% endblock %}
+</head>
+<body>
+    {{ request.path }}
+    {% block contenido %}
+        <h1>Contenido de la pagina base....</h1>
+    {% endblock %}
+
+    <footer>
+        {% block footer %}
+        
+        {% endblock %}
+    </footer>
+</body>
+</html>
