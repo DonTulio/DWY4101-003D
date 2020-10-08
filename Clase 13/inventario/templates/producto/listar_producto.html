@@ -1,0 +1,36 @@
+{% extends "base/index.html" %}
+
+{% block main %}
+    <h1>Listar productos....</h1>
+    <a href="/producto/agregar/">Agregar nuevo producto....</a>
+    {% if productos %}
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Stock</th>
+                <th>acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for producto in productos %}
+                <tr>
+                    <td>{{ producto.id }}</td>
+                    <td>{{ producto.nombre }}</td>
+                    <td>{{ producto.precio }}</td>
+                    <td>{{ producto.stock }}</td>
+                    <td>
+                        <a href="/producto/editar/{{ producto.id }}">editar</a>
+                        <a href="/producto/eliminar/{{ producto.id }}">Eliminar</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+        
+    {% else %}
+        <p>No hay productos....</p>
+    {% endif %}
+{% endblock main %}
