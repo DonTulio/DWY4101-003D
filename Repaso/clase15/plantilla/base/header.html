@@ -7,6 +7,9 @@
   <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
     {% if user.is_authenticated %}
     <ul class="navbar-nav justify-content-end">
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'agregarPublicacion' %}">Agregar publicación</a>
+      </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Bienvenido {{ user.username }}
@@ -30,6 +33,9 @@
 </nav>
 {% if messages %}
 {% for message in messages %}
-{{ message }}{{message.tags}}
+<div class="alert alert-{{message.tags}}" role="alert">
+  {{ message }}
+</div>
+
 {% endfor %}
 {% endif %}

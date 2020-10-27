@@ -1,0 +1,18 @@
+{% extends 'base/index.html' %}
+
+{% block main %}
+<section class="row">
+
+    {% if publicaciones %}
+    {% for publicacion in publicaciones %}
+    <article class="card col-sm-12 col-md-4" >
+        <img src="/media/{{ publicacion.imagen }}" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">{{ publicacion.titulo }}</h5>
+        <p class="card-text">{{ publicacion.detalle }}</p>
+        </div>
+    </article>
+    {% endfor %}
+    {% endif  %}
+</section>
+{% endblock main %}

@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from .forms import FormularioCreacion, FormularioPerfil,FormIniciarSesion
 from django.contrib import messages
 from django.contrib.auth import login, logout, authenticate
+## importando el modelo desde publicaciones.....
+from apps.imagen.models import Publicacion
 # Create your views here.
 def mostarFormularioRegistro(request):
     formulario1 = FormularioCreacion()
@@ -29,7 +31,7 @@ def registroUsuario(request):
                 messages.SUCCESS,
                 'Usuario registrado con éxito :D'
             )
-            return redirect('/iniciar/')
+            return redirect('/inicio/')
         context = {
         'formulario1':formulario1,
         'formulario2':formulario2
@@ -75,3 +77,14 @@ def iniciarSesion(request):
 def salir(request):
     logout(request)
     return redirect('/inicio/')
+
+def perfil(request):
+    publicaciones = Publicacion.objects.all()
+    context = {
+        'publicaciones':publicaciones
+    }
+    return render(
+        request,
+        'perfil/perfil.html',
+        context
+    )
