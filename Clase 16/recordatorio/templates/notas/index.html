@@ -1,0 +1,57 @@
+{% extends "base/index.html" %}
+{% load static %}
+{% block main %}
+<section class="row mt-5">
+    <article class="col-md-8">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Titulo</th>
+                        <th>Fecha</th>
+                        <th>Estado</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí esto se debe iterrar para carglos datos del api -->
+                    <tr></tr>
+                </tbody>
+            </table>
+        </div>
+    </article>
+    <article class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Agrega una nota</h3>
+            </div>
+            <form action="">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label for="titulo">titulo</label>
+                            <input type="text" required maxlength="45" class="form-control" id="titulo" name="titulo">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label for="detalle">Detalle</label>
+                            <textarea name="detalle" required class="form-control" id="detalle" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-footer">
+                    <input type="submit" class="btn btn-block btn-primary" value="Agregar">
+                </div>
+            </form>
+        </div>
+    </article>
+</section>
+
+{% endblock main %}
+{% block script %}
+    <script src="{% static 'js/js.js' %}">
+
+    </script>
+{% endblock script %}
