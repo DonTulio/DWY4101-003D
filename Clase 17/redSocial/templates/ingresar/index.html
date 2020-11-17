@@ -1,0 +1,11 @@
+{% extends 'base/index.html' %}
+{% block titulo %}
+Iniciar sesión
+{% endblock titulo %}
+{% block main %}
+<section class="jumbotron">
+    <h1 class="display-4">Bienvenido</h1>
+    <hr class="my-4">
+    <a href="{% url 'redes:begin' 'facebook' %}" class="btn btn-info btn-block" >Iniciar sesión con facebook</a>
+</section>
+{% endblock main %}

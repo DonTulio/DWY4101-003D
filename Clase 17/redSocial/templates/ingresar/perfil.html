@@ -1,0 +1,18 @@
+{% extends 'base/index.html' %}
+{% block titulo %}
+Perfil
+{% endblock titulo %}
+
+{% block main %}
+{{ backends.associated }}
+{{ backends }}
+{{ user.first_name }}
+{% if backends.associated %}
+    {% for bkn in backends.associated %}
+    {{  bkn.provider }}
+        {% if bkn.provider == 'facebook' %}
+            {{ bkn.extra_data.name }}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+{% endblock main %}
