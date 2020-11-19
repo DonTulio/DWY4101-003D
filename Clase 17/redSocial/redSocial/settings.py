@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'social_django',
-    'apps.social'
+    'apps.social',
+    'pwa'
 ]
 #  Authentication_backends
 AUTHENTICATION_BACKENDS = [
@@ -70,6 +71,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -137,5 +140,17 @@ LOGIN_REDIRECT_URL = 'perfil'
 LOGOUT_URL = 'salir'
 LOGOUT_REDIRECT_URL = 'ingreso'
 ## Valores para iniciar sesión con facebook
-SOCIAL_AUTH_FACEBOOK_KEY = '' # Su aPP ID
-SOCIAL_AUTH_FACEBOOK_SECRET = '' # SU Secret de app.
+SOCIAL_AUTH_FACEBOOK_KEY = '1013883765746174' # Su aPP ID
+SOCIAL_AUTH_FACEBOOK_SECRET = '037b6f15b5bd10ae41a9e52669f5c860' # SU Secret de app.
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email','user_link']
+SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
+    'fields': 'name, email, picture.type(large), link'
+}
+SOCIAL_AUTH_FACEBOOK_EXTRA_DATA = [
+    ('name','name'),
+    ('email','email'),
+    ('picture','picture'),
+    ('link','user_link')
+]
+## Variable de configuración para el SW
+PWA_SERVICE_WORKER_PATH = join(BASE_DIR,'assets','sw','serviceworker.js')

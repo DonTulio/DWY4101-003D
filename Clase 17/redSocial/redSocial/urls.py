@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('apps.social.urls'),name='social'),
     path('salir/',LogoutView.as_view(), name='salir'),
-    path('redes/',include('social_django.urls',namespace='redes'))
+    path('redes/',include('social_django.urls',namespace='redes')),
+    path('',include('pwa.urls'))
 ]
