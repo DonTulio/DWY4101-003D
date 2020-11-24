@@ -140,8 +140,8 @@ LOGIN_REDIRECT_URL = 'perfil'
 LOGOUT_URL = 'salir'
 LOGOUT_REDIRECT_URL = 'ingreso'
 ## Valores para iniciar sesión con facebook
-SOCIAL_AUTH_FACEBOOK_KEY = '1013883765746174' # Su aPP ID
-SOCIAL_AUTH_FACEBOOK_SECRET = '037b6f15b5bd10ae41a9e52669f5c860' # SU Secret de app.
+SOCIAL_AUTH_FACEBOOK_KEY = '680414159332861' # Su aPP ID
+SOCIAL_AUTH_FACEBOOK_SECRET = 'd48689dbae409be0ac6a053bb1958363' # SU Secret de app.
 SOCIAL_AUTH_FACEBOOK_SCOPE = ['email','user_link']
 SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
     'fields': 'name, email, picture.type(large), link'
